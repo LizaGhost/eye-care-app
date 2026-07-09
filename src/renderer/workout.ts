@@ -3,7 +3,12 @@ import { EXERCISES, calculateExerciseDurations, formatTime, calculateProgress } 
 declare global {
   interface Window {
     electronAPI: {
+      startWorkout: () => void;
       closeWorkout: () => void;
+      closeReminder: () => void;
+      getConfig: () => Promise<any>;
+      updateConfig: (config: any) => void;
+      onConfigUpdated: (callback: (config: any) => void) => void;
     };
   }
 }
@@ -143,3 +148,5 @@ function startWorkout(): void {
 document.addEventListener("DOMContentLoaded", () => {
   startWorkout();
 });
+
+export {};
