@@ -4,6 +4,9 @@ declare global {
       startWorkout: () => void;
       closeWorkout: () => void;
       closeReminder: () => void;
+      getConfig: () => Promise<any>;
+      updateConfig: (config: any) => void;
+      onConfigUpdated: (callback: (config: any) => void) => void;
     };
   }
 }
@@ -24,3 +27,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+export {};
