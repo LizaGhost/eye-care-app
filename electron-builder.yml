@@ -1,0 +1,29 @@
+appId: com.eyecare.app
+productName: Eye Care
+directories:
+  buildResources: assets
+  output: dist/packages
+
+files:
+  - dist/**/*
+  - node_modules/**/*
+  - config.json
+
+win:
+  target:
+    - nsis
+    - portable
+  certificateFile: null
+  certificatePassword: null
+  signingHashAlgorithms:
+    - sha256
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Eye Care
+
+portable:
+  artifactName: ${productName}-${version}.${ext}
