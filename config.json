@@ -1,0 +1,5 @@
+{
+  "intervalMinutes": 60,
+  "workoutSeconds": 300,
+  "autoStartEnabled": true
+}
