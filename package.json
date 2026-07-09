@@ -20,14 +20,13 @@
     "node-schedule": "^2.1.1"
   },
   "devDependencies": {
-    "@types/electron": "^1.6.10",
+    "electron": "^27.0.0",
+    "electron-builder": "^24.9.1",
     "@types/node": "^20.0.0",
     "@types/node-schedule": "^2.1.1",
-    "concurrently": "^8.0.0",
-    "cross-env": "^7.0.3",
-    "electron": "^27.0.0",
-    "electron-builder": "^24.0.0",
     "typescript": "^5.0.0",
-    "wait-on": "^7.0.1"
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "wait-on": "^7.2.0"
   }
 }
