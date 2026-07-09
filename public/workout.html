@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eye Care Workout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      color: white;
+    }
+
+    #workout-container {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .workout-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .timer {
+      font-size: 80px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #4ade80 0%, #fbbf24 100%);
+      width: 0%;
+      transition: width 0.1s linear;
+      border-radius: 10px;
+    }
+
+    .progress-text {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 5px;
+    }
+
+    .exercise-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px 30px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .exercise-number {
+      display: inline-block;
+      background: linear-gradient(135deg, #4ade80 0%, #fbbf24 100%);
+      color: #1e3c72;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    #exercise-name {
+      font-size: 40px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    #exercise-instruction {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    .remaining {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .completion-screen {
+      text-align: center;
+      padding: 60px 30px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .completion-screen h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #4ade80 0%, #fbbf24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .completion-screen p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .close-btn {
+      padding: 14px 40px;
+      background: linear-gradient(135deg, #4ade80 0%, #fbbf24 100%);
+      color: #1e3c72;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .close-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(74, 222, 128, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="workout-container"></div>
+
+  <script src="../dist/renderer/workout.js"></script>
+</body>
+</html>
