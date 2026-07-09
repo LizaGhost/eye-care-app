@@ -70,3 +70,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadConfig();
   setupEventListeners();
 });
+
+export {};
