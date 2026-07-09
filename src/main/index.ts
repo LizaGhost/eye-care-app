@@ -29,7 +29,6 @@ function createMainWindow(): void {
       preload: path.join(__dirname, "../preload/preload.js"),
       nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: false,
     },
   });
 
@@ -64,7 +63,6 @@ function createReminderWindow(): void {
       preload: path.join(__dirname, "../preload/preload.js"),
       nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: false,
     },
   });
 
@@ -98,7 +96,6 @@ function createWorkoutWindow(): void {
       preload: path.join(__dirname, "../preload/preload.js"),
       nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: false,
     },
   });
 
