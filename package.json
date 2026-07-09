@@ -1,0 +1,33 @@
+{
+  "name": "eye-care-app",
+  "version": "1.0.0",
+  "description": "Desktop application for eye care reminders and exercises on Windows 10",
+  "main": "dist/main/index.js",
+  "homepage": "./",
+  "author": "Eye Care Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"npm run build:main -- --watch\" \"wait-on tcp:3000 && electron .\"",
+    "build": "npm run build:main && npm run build:renderer",
+    "build:main": "tsc --project tsconfig.main.json",
+    "build:renderer": "tsc --project tsconfig.renderer.json",
+    "pack": "npm run build && electron-builder --win --publish never",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "electron-log": "^5.0.0",
+    "node-schedule": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^20.0.0",
+    "@types/node-schedule": "^2.1.1",
+    "concurrently": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "electron": "^27.0.0",
+    "electron-builder": "^24.0.0",
+    "typescript": "^5.0.0",
+    "wait-on": "^7.0.1"
+  }
+}
